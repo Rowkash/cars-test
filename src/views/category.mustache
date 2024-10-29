@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Document</title>
+	</head>
+	<body>
+		<h1>{{category.title}}</h1>
+		<p>{{category.description}}</p>
+		<nav>
+  		<a href="/">Home</a> / {{category.title}}
+		</nav>
+		<ul>
+  		{{#cars}}
+    		<li><a href="/category-{{category.id}}/car-{{id}}">{{title}}</a> - {{price}}$</li>
+  		{{/cars}}
+		</ul>
+	</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<h1>Cars catalog</h1>
+{{#categories}}
+  <h2><a href="/category-{{id}}">{{title}}</a></h2>
+  <p>{{description}}</p>
+  <ul>
+    {{#cars}}
+      <li><a href="/category-{{category}}/car-{{id}}">{{title}}</a> - {{price}}$</li>
+    {{/cars}}
+  </ul>
+{{/categories}}
+</body>
+</html>

@@ -1,0 +1,27 @@
+version: '3.1'
+
+services:
+  db:
+    container_name: my-db
+    image: mongo
+    restart: always
+    ports:
+      - 27017:27017
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_INITDB_ROOT_USERNAME}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_INITDB_ROOT_PASSWORD}
+
+  api:
+    container_name: api
+    build:
+      context: .
+    env_file:
+      - .env
+    volumes:
+      - .:/app
+    ports:
+      - 3001:3001
+    depends_on:
+      - db
+    restart: always
+    command: sh -c "node migration.js && pnpm dev"

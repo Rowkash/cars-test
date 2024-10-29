@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit Cars</title>
+</head>
+<body>
+  {{#cars}}
+	<h1>Car: {{title}}</h1>
+  
+  <form action="/crm/post/car-{{id}}" method="POST">
+    <label for="title">Title:</label>
+    <input type="text" id="title" name="title" value="{{title}}" required>
+    <br>
+
+    <label for="price">Price $:</label>
+    <input type="number" id="price" name="price" value="{{price}}" required>
+    <br>
+
+    <label>Colors:</label><br>
+    	{{#colors}}
+        <input type="checkbox" id="color{{title}}" name="colors" value="{{title}}" {{#available}}checked{{/available}}>
+        <label for="color{{title}}">{{title}}</label><br>
+    	{{/colors}}
+    <br>
+
+    <label for="description">Description:</label>
+    <textarea id="description" name="description" required>{{description}}</textarea>
+    <br>
+
+		<label for="category">Category:</label>
+    	<select id="category" name="category" required>
+      	{{#categories}}
+        	<option value="{{_id}}" {{#active}}selected{{/active}}>{{title}}</option>
+    		{{/categories}}
+    	</select>
+    <br>
+
+    <button type="submit">Save Changes</button>
+  </form>
+	{{/cars}}
+  
+</body>
+</html>

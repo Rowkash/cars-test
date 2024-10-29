@@ -1,0 +1,76 @@
+{
+	"cars": [
+		{
+			"title": "Volkswagen Polo",
+			"category": "sedan",
+			"image": "https://fuelapi.com/media/images/samples/Black-Audis.jpg",
+			"price": 20000,
+			"colors": [
+				"blue",
+				"red"
+			],
+			"description": "This is description"
+		},
+		{
+			"title": "Ford",
+			"category": "van",
+			"image": "https://fuelapi.com/media/images/samples/Black-Audis.jpg",
+			"price": 20000,
+			"colors": [
+				"blue",
+				"black"
+			],
+			"description": "This is description"
+		},
+		{
+			"title": "Mercedes",
+			"category": "suv",
+			"image": "https://fuelapi.com/media/images/samples/Black-Audis.jpg",
+			"price": 20000,
+			"colors": [
+				"blue",
+				"green"
+			],
+			"description": "This is description"
+		},
+		{
+			"title": "Mazda",
+			"category": "suv",
+			"image": "https://fuelapi.com/media/images/samples/Black-Audis.jpg",
+			"price": 20000,
+			"colors": [
+				"blue",
+				"yellow"
+			],
+			"description": "This is description"
+		},
+		{
+			"title": "Subaru",
+			"category": "hatchback",
+			"image": "https://fuelapi.com/media/images/samples/Black-Audis.jpg",
+			"price": 20000,
+			"colors": [
+				"blue"
+			],
+			"description": "This is description"
+		}
+	],
+	"categories": [
+		{
+			"title": "sedan",
+			"description": "Sedan car category"
+		},
+		{
+			"title": "suv",
+			"description": "Suv car category"
+		},
+		{
+			"title": "van",
+			"description": "Van car category"
+		},
+		{
+			"title": "hatchback",
+			"description": "Hatchback car category"
+		}
+	]
+}

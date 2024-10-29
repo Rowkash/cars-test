@@ -1,0 +1,29 @@
+{
+  "name": "weblium-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "/src/main.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon --exec 'node --inspect' src/main.js",
+    "dev": "nodemon src/main.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "commander": "^12.1.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "mongoose": "^8.3.1",
+    "mongoose-plugin-autoinc": "^1.1.9",
+    "mustache": "^4.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^9.13.0",
+    "nodemon": "^3.1.7",
+    "prettier": "3.3.3"
+  }
+}
